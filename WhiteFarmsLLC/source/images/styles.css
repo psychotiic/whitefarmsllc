@@ -4,10 +4,11 @@
 }
 
 body {
-	font: 8.5pt Verdana;
+	font: 9.9pt Meiryo UI;
 	background: #000000;
-	color: #66FF33;
-	background: #000000 url(../images/whitefarms.png);
+	/*color: #66FF33; */
+	color: #27AE60;
+	background: #000000 url(../images/membersonly.jpg);
 }
 
 div#container {
@@ -17,13 +18,13 @@ div#container {
 	background: #0A0A0A;
 	margin: 0 auto;
 	margin-top: 15px;
-	background: url(../images/bg.gif) repeat;
+	background: url(../images/back.jpg) repeat;
 }
 
 div#header {
 	width: 998px;
 	height: 100px;
-	background: url(../images/logo1.png) no-repeat;
+	background: url(../images/logo2.png) no-repeat;
 	text-align: left;
 }
 
@@ -352,3 +353,32 @@ left: 50%;
 margin-top: -230px;
 margin-left: -450px;
 }	
+ .btn {
+  background: #27AE60;
+  background-image: -webkit-linear-gradient(top, #27AE60, #003D14);
+  background-image: -moz-linear-gradient(top, #27AE60, #003D14);
+  background-image: -ms-linear-gradient(top, #27AE60, #003D14);
+  background-image: -o-linear-gradient(top, #27AE60, #003D14);
+  background-image: linear-gradient(to bottom, #27AE60, #003D14);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Georgia;
+  color: #000000;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+
+  border: solid #1f628d 0px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #808080, #4D4D4D);
+  background-image: -moz-linear-gradient(top, #808080, #4D4D4D);
+  background-image: -ms-linear-gradient(top, #808080, #4D4D4D);
+  background-image: -o-linear-gradient(top, #808080, #4D4D4D);
+  background-image: linear-gradient(to bottom, #808080, #4D4D4D);
+  text-decoration: none;
+    color: #27AE60;
+}

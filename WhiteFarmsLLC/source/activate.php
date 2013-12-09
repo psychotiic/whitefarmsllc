@@ -131,7 +131,7 @@ if(empty($err)) {
           <tr> 
             <td colspan="2"> <div align="center"> 
                 <p> 
-                  <input name="doActivate" type="submit" id="doLogin3" value="Activate">
+                  <input name="doActivate" type="submit" id="doLogin3" value="Activate" class="btn">
                 </p>
               </div></td>
           </tr>

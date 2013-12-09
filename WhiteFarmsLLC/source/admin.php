@@ -32,28 +32,13 @@ exit();
 </div>
 
 <div class="box">
-<h2>Administration Panel &bull; Configuration</h2>
-<!--<div class="box-content">
-      <table width="45%" border="0" cellpadding="0" cellspacing="1" class="myaccount">
-          <form name="frmcontadd" action="" method="post">
-        <tr>
-          <td>Change Site Title</td>
-          <td><input size="20" class="entryfield" name="bootername" type="text" id="bootername" value=""></td>
-        </tr> 
-<tr><td></td><td><input class="button" type="submit" name="SubmitConfig" value="Update Configuration"></form></td>
-    </table>
-    </div>
-</div>  -->
-
-
-<div class="box">
 <h2>Administration Panel &bull; Maintenance</h2>
 <div class="box-content">
      <table width="100%" border="0" cellpadding="0" cellspacing="1" class="myaccount">
         <tr>
-          <td><center><form name="frmcontadd" action="" method="post">Empty Logs:<input class="button" type="submit" name="EmptyLogs" value="Truncate Logs"></center></font></td>
-          <td><center><form name="frmcontadd" action="" method="post">Empty News:<input class="button" type="submit" name="EmptyNews" value="Truncate News"></center></td>
-          <td><center><form name="frmcontadd" action="" method="post">Prune Users:<input class="button" type="submit" name="EmptyUsers" value="Delete Unapproved Users"></center></td>
+          <td><center><form name="frmcontadd" action="" method="post">Empty Logs:<br/><input class="btn" type="submit" name="EmptyLogs" value="Truncate Logs"></center></font></td>
+          <td><center><form name="frmcontadd" action="" method="post">Empty News:<input class="btn" type="submit" name="EmptyNews" value="Truncate News"></center></td>
+          <td><center><form name="frmcontadd" action="" method="post">Prune Users:<input class="btn" type="submit" name="EmptyUsers" value="Delete Unapproved Users"></center></td>
         </tr>
     </table>
 
@@ -87,7 +72,7 @@ News Title : <input size="41" class="entryfield" name="title" type="text" id="ti
 <br><br>
 <textarea cols="50" rows="3" name="body">
 </textarea>
-<br><br><input class="button" type="submit" name="Submit2" value="Post News">
+<br><br><input type="submit" name="Submit2" value="Post News" class="btn">
 </form>
 </div>
 </div>
@@ -108,7 +93,7 @@ if(isset($_POST['Submit3'])) {
 ?>
 <form name="frmcontadd" action="" method="post">
 Update Description : <input size="30" class="entryfield" name="update" type="text" id="update"></td>
-<br><input class="button" type="submit" name="Submit3" value="Post Update">
+<br/><br/><input type="submit" name="Submit3" value="Post Update" class="btn">
 </form>
 </div>
 </div>
@@ -139,7 +124,7 @@ Update Description : <input size="30" class="entryfield" name="update" type="tex
                 Suspended Accounts
                 <br>
                 <br>
-                <input name="doSearch" type="submit" id="doSearch" value="Search">
+                <input name="doSearch" type="submit" id="doSearch" value="Search" class="btn">
               </form></td>
         </tr>
       </table>
@@ -250,7 +235,7 @@ Update Description : <input size="30" class="entryfield" name="update" type="tex
 			User Email:<input id="user_email<?php echo $rrows['id']; ?>" name="user_email<?php echo $rrows['id']; ?>" type="text" size="20" value="<?php echo $rrows['user_email']; ?>" >
 			Level: <input id="user_level<?php echo $rrows['id']; ?>" name="user_level<?php echo $rrows['id']; ?>" type="text" size="5" value="<?php echo $rrows['user_level']; ?>" > 1->user,5->admin
 			<br><br>New Password: <input id="pass<?php echo $rrows['id']; ?>" name="pass<?php echo $rrows['id']; ?>" type="text" size="20" value="" > (leave blank)
-			<input name="doSave" type="button" id="doSave" value="Save" 
+			<input name="doSave" type="button" id="doSave" value="Save" class="btn"
 			onclick='$.get("do.php",{ cmd: "edit", pass:$("input#pass<?php echo $rrows['id']; ?>").val(),user_level:$("input#user_level<?php echo $rrows['id']; ?>").val(),user_email:$("input#user_email<?php echo $rrows['id']; ?>").val(),user_name: $("input#user_name<?php echo $rrows['id']; ?>").val(),id: $("input#id<?php echo $rrows['id']; ?>").val() } ,function(data){ $("#msg<?php echo $rrows['id']; ?>").html(data); });'> 
 			<a  onclick='$("#edit<?php echo $rrows['id'];?>").hide();' href="javascript:void(0);">close</a>
 		 
@@ -262,11 +247,11 @@ Update Description : <input size="30" class="entryfield" name="update" type="tex
           <?php } ?>
         </table>
 	    <p><br>
-          <input name="doApprove" type="submit" id="doApprove" value="Approve">
-          <input name="doBan" type="submit" id="doBan" value="Ban">
-          <input name="doUnban" type="submit" id="doUnban" value="Unban">
-          <input name="doDelete" type="submit" id="doDelete" value="Delete">
-          <input name="query_str" type="hidden" id="query_str" value="<?php echo $_SERVER['QUERY_STRING']; ?>">
+          <input name="doApprove" type="submit" id="doApprove" value="Approve"class="btn">
+          <input name="doBan" type="submit" id="doBan" value="Ban" class="btn">
+          <input name="doUnban" type="submit" id="doUnban" value="Unban" class="btn">
+          <input name="doDelete" type="submit" id="doDelete" value="Delete" class="btn">
+          <input name="query_str" type="hidden" id="query_str" value="<?php echo $_SERVER['QUERY_STRING']; ?>" class="btn">
           <strong>Note:</strong> If you delete the user can register again, instead 
           ban the user. </p>
         <p><strong>Edit Users:</strong> To change email, user name or password, 

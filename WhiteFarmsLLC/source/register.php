@@ -75,7 +75,12 @@ $a_link =
   exit();
 	 
 	 } 
- }					 
+ }
+
+if (isset($_POST['cancelButton']))
+		{
+			header('location: index.php');
+		} 
 
 ?>
 <html>
@@ -84,7 +89,7 @@ $a_link =
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <script language="JavaScript" type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/jquery.validate.js"></script>
-
+<link href="images/styles.css" rel="stylesheet" type="text/css">
   <script>
   $(document).ready(function(){
     $.validator.addMethod("username", function(value, element) {
@@ -132,6 +137,9 @@ $a_link =
 	 
 	  <br>
       <form action="register.php" method="post" name="regForm" id="regForm" >
+	  <div class="box">
+		<h2>Register Panel &bull; Enter You Information</h2>
+		<div class="box-content">
         <table width="95%" border="0" cellpadding="3" cellspacing="3" class="forms">
           <tr> 
             <td colspan="2">Your Full Name<span class="required"><font color="#CC0000">*</font></span><br> 
@@ -152,7 +160,7 @@ $a_link =
             <td><input name="user_name" type="text" id="user_name" class="required username" minlength="5" > 
               <input name="btnAvailable" type="button" id="btnAvailable" 
 			  onclick='$("#checkid").html("Please wait..."); $.get("checkuser.php",{ cmd: "check", user: $("#user_name").val() } ,function(data){  $("#checkid").html(data); });'
-			  value="Check Availability"> 
+			  value="Check Availability" class="btn"> 
 			    <span style="color:red; font: bold 12px verdana; " id="checkid" ></span> 
             </td>
           </tr>
@@ -180,8 +188,10 @@ $a_link =
           </tr>
         </table>
         <p align="center">
-          <input name="doRegister" type="submit" id="doRegister" value="Register">
+          <input name="doRegister" type="submit" id="doRegister" value="Register" class="btn">
+		  <button name ="cancelButton" id="cancel" type="submit" class="btn"/ onclick="">Cancel</button>
         </p>
+		</div></div><!-- box shit -->
       </form>
       <p align="right"><span style="font: normal 9px verdana">Powered by <a href="http://php-login-script.com">PHP 
                   Login Script v2.0</a></span></p>

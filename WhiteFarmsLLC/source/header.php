@@ -72,9 +72,20 @@ if (isset($_SESSION['user_id'])) {
 <div class="small-box"><strong><h2>Welcome, <?php echo $username; ?>!</strong></h2>
     <div class="small-box-content">
         <p>
-		Current Time: <font color="white"><strong><?php $date = date("h:i:s A", time()); echo $date; ?></strong></font><br/>
+		Current Time: <font color="white"><strong><?php //$date = date("h:i:s A", time()); echo $date; 
+		
+	$timezone = "UTC";
+date_default_timezone_set($timezone);
+$utc = gmdate("M d Y h:i:s A");
+//print "UTC: " . date('r', strtotime($utc)) . "\n";
+$timezone = "America/Guayaquil";
+date_default_timezone_set($timezone);
+$offset = date('Z', strtotime($utc));
+//print "offset: $offset \n";
+print date('r', strtotime($utc) + $offset) . "\n";
+		?></strong></font><br/>
         Profile ID #: <font color="white"><strong><?php echo $id; ?></strong></font> <br />
-        User Level: <font color="white"><strong><?php echo $level; ?></strong></font> <br />
+       <!-- User Level:  <font color="white"><strong><?php //echo $level; ?></strong></font> <br />-->
         </p>
 
     </div></div>
@@ -107,6 +118,41 @@ if (isset($_SESSION['user_id'])) {
 
 
     </div></div>
+	<?php  if (checkAdmin()) { 
+                                        // Admin only links should go inside here   
+
+										
+                                        ?>
+	<div class="small-box"><h2>Total Inventory</h2>
+    <div class="small-box-content">
+        <p>
+					<table width="100%" border="0" align="center" cellpadding="1" cellspacing="1" class="forms">
+                        <font size="1">
+                                               
+          <tr>
+            <td><font color="white">Total Items In Stock</font></td>
+            <td><font color="lime"><?php echo $shellsOnline; ?></font></td>
+          </tr>
+
+          <tr>
+            <td><font color="white">GET Clones In Stock</font></td>
+            <td><font color="lime"><?php echo $num_rows; ?></font></td>
+          </tr>
+
+          <tr>
+            <td><font color="white">POST Seeds In Stock</font></td>
+            <td><font color="lime"><?php echo $num_rows2; ?></font></td>
+          </tr>   
+                        </font>
+                    </table>
+        </p>
+
+
+    </div></div>
+	
+		<?php } ?>
+	
+	
 
     <div class="small-box"><h2>Cart Status</h2>
     <div class="small-box-content">
@@ -118,11 +164,11 @@ if (isset($_SESSION['user_id'])) {
           
           <tr>
             <td><font color="white">Items In Cart</font></td>
-            <td><font color="lime"><?php echo $shellsOnline; ?></font></td>
+            <td><font color="lime"><?php //echo $shellsOnline; ?></font></td>
           </tr>
 		  <tr>
-            <td><font color="white">Total Cost $</font></td>
-            <td><font color="lime"><?php echo $shellsOnline; ?></font></td>
+            <td><font color="white">Total Cost </font></td>
+            <td><font color="lime"><?php echo "$";//shellsOnline; ?></font></td>
           </tr>
 
                         </font>

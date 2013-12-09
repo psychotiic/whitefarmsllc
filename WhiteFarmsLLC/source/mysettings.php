@@ -63,7 +63,7 @@ $rs_settings = mysql_query("select * from users where id='$_SESSION[user_id]'");
 	 $("#pform").validate();
   });
   </script>
-<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="./images/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -134,7 +134,7 @@ $rs_settings = mysql_query("select * from users where id='$_SESSION[user_id]'");
           </tr>
         </table>
         <p align="center"> 
-          <input name="doSave" type="submit" id="doSave" value="Save">
+          <input name="doSave" type="submit" id="doSave" value="Save" class="btn">
         </p><br/>
       </form>
 	  <?php } ?>
@@ -153,14 +153,14 @@ $rs_settings = mysql_query("select * from users where id='$_SESSION[user_id]'");
             <td><input name="pwd_new" type="password" id="pwd_new" class="required password"  ></td>
           </tr>
         </table>
-        <p align="center"> 
-          <input name="doUpdate" type="submit" id="doUpdate" value="Update">
-        </p>
+        
         <p>&nbsp; </p>
       </form>
       <p>&nbsp; </p>
       <p>&nbsp;</p>
-	   
+	   <p align="center"> 
+          <input name="doUpdate" type="submit" id="doUpdate" value="Update" class="btn">
+        </p>
       <p align="right">&nbsp; </p></td>
     <td width="196" valign="top">&nbsp;</td>
   </tr>

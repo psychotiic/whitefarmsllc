@@ -36,7 +36,7 @@ if($i == 0) {
 <div class="box">
 <h2>No news to be displayed</h2>
 <div class="box-content">
-<p>There are currently no news posts! Create one in the administration panel to remove this message.</p>
+<p>There are currently no news posts! Create one to remove this message.</p>
 </div>
 </div>
    <?php
@@ -61,17 +61,32 @@ if($body == "") { die("You must supply a message body for your news post"); }
 if($author == "") { die("Possible hack detected."); }
     	$query = "INSERT INTO news (title, message, date, author) VALUES ('$title', '$body', '$date', '$author')";
 	$result = mysql_query($query);
+	header('location: ./index.php');
 }
 
 
 ?>
 <div class="box-content">
 <form name="frmcontadd" action="" method="post">
-News Title : <input size="41" class="entryfield" name="title" type="text" id="title"></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;News Title : <input size="41" class="entryfield" name="title" type="text" id="title"style="background:#4D4D4D; color: #27AE60;"></td>
 <br><br>
-<textarea cols="50" rows="3" name="body">
+<textarea cols="119" rows="10" name="body" style="background:#4D4D4D;color:#27AE60;">
 </textarea>
-<br><br><input class="button" type="submit" name="Submit2" value="Post News">
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" name="Submit2" value="Post News" class="btn"><br/>
 </form>
 </div>
 </div>

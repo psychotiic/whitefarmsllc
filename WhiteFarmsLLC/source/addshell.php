@@ -1,47 +1,56 @@
 <?php
 require 'header.php';
 ?>
+<head>
+<link href="./images/styles.css" rel="stylesheet" type="text/css">
 <title>White Farms LLC</title>
+</head>
     <?php if (checkAdmin()) { ?>
+<li><h2><strong>Important Notice To All Employees</strong></h2>
+				<div class="box">
+				<form>
+		       <h3><span style="color:red ;align:center" >Here you can make changes to the inventory. Please note that you may add
+			   more than one item at a time.  To do this please hit enter after each item
+			   the cursor should go to a new line, then continue adding items.</span></h3><br/>
+				</form></div></li>
+				
+				<div class="box">
+				<li><h2><strong>Current Stock</strong></h2>
+				<form>
+				<?php 
+				echo "Not Currently Working"; ?><br/>
+				<?php echo "Current Clones In Stock: ";?><br/>
+				<?php echo "Current Seends In Stock:";?><br/>
 
+				</form>
+				</div>
+     <div class="box">
+ <li><h2><strong>Add Clones</strong></h2>
+    <div class="box-content">
+<center>
+<form name="frmcontadd" action="" method="post">
+
+  <textarea class="entryField" name="url" cols=115 rows=10 style="background:#4D4D4D; color: #27AE60;size:15px;" ></textarea><br/><br/>
+  <input  type="submit" name="Submit" value="Add Clones" class="btn" ><br/><br/>
+
+</form>
+</center>
+</div>
+</div> </li>
 <div class="box">
-    <h2>Add Clone(s)</h2>
+ <li><h2><strong>Add Seeds</strong></h2>
     <div class="box-content">
 <center>
 <form name="frmcontadd" action="" method="post">
 
-  <textarea class="entryfield" name="url" cols=115 rows=10></textarea><br>
-  <input class="button" type="submit" name="Submit" value="Add Clones">
+  <textarea class="entryfield" name="url2" cols=115 rows=10 style="background:#4D4D4D; color: #27AE60;"></textarea><br/><br/>
+  <input  type="submit" name="Submit2" value="Add Seeds" class="btn"><br/><br/>
 
 </form>
 </center>
 </div>
-</div>
-<div class="box">
-    <h2>Add Seed(s)</h2>
-    <div class="box-content">
-<center>
-<form name="frmcontadd" action="" method="post">
+</div></li>
 
-  <textarea class="entryfield" name="url2" cols=115 rows=10></textarea><br>
-  <input class="button" type="submit" name="Submit2" value="Add Seeds">
-
-</form>
-</center>
-</div>
-</div>
-<!--<div class="box">
-    <h2>Add a Slowloris Shell(s)</h2>
-    <div class="box-content">
-<center>
-<form name="frmcontadd" action="" method="post">
-
-  <textarea class="entryfield" name="url3" cols=115 rows=10></textarea><br>
-  <input class="button" type="submit" name="Submit3" value="Add Slowloris Shell(s)">
-
-</form>
-</center>
-</div> -->
 </div>
 <?php
 // first the check of a submitted form

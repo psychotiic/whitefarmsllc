@@ -112,7 +112,7 @@ $num = mysql_num_rows($result);
 <form action="login.php" method="post" name="logForm" id="logForm" >
 Username: <input name="usr_email" type="text" class="required" id="txtbox" size="25"><br>
 Password: <input name="pwd" type="password" class="required password" id="txtbox" size="25"><br><br>
-<input name="doLogin" type="submit" id="doLogin3" value="Login">
+<input name="doLogin" type="submit" id="doLogin3" value="Login" class="btn">
 <input name="remember" type="checkbox" id="remember" value="1"> Remember Me</div><br>
 
 
